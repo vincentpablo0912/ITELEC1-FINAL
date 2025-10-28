@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#E8F5E9"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/prompt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your name:"
+        android:textSize="22sp"
+        android:textColor="#2E7D32"
+        android:fontFamily="@font/comicneue"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:maxWidth="300dp"
+        android:hint="e.g. John"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:textSize="18sp"
+        android:fontFamily="@font/comicneue"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/go_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Market"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="@font/comicneue"
+        android:paddingHorizontal="24dp" />
+</LinearLayout>
