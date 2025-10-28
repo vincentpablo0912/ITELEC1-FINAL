@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/main"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="20dp"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="58dp">
 
-        <Button
-            android:id="@+id/btnStandard"
+        <!-- Step 1: TextView for instructions -->
+        <TextView
+            android:id="@+id/textInstructions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Standard Button" />
+            android:layout_marginBottom="10dp"
+            android:text="Enter your name and select your country:"
+            android:textSize="18sp" />
 
-        <ImageButton
-            android:id="@+id/btnImage"
-            android:layout_width="wrap_content"
+        <!-- Step 2: EditText for user input -->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_camera"
-            android:contentDescription="Camera Button"
-            android:background="@null"
-            android:padding="10dp" />
+            android:hint="Enter your name" />
 
-        <ToggleButton
-            android:id="@+id/btnToggle"
-            android:layout_width="wrap_content"
+        <!-- Step 3: AutoCompleteTextView with country suggestions -->
+        <AutoCompleteTextView
+            android:id="@+id/autoCountry"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOn="ON"
-            android:textOff="OFF" />
+            android:layout_marginTop="10dp"
+            android:hint="Select or type a country" />
+
+        <!-- Step 4: Spinner with sample options -->
+        <Spinner
+            android:id="@+id/spinnerOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
